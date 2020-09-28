@@ -9,6 +9,7 @@ import java.util.List;
 public class Chair {
     protected List<Detail> details = new ArrayList<>();
     private Brand brand;
+    private ChairState state;
 
     public void addDetail(Detail detail) {
         this.details.add(detail);
@@ -17,17 +18,6 @@ public class Chair {
     public void setBrand(Brand brand) {
         this.brand = brand;
     }
-
-    public enum ChairState {
-        READY, NOT_READY, IN_PROCESS;
-
-        @Override
-        public String toString() {
-            return super.toString().replace('_', ' ').toLowerCase();
-        }
-    }
-
-    private ChairState state;
 
     public Chair() {
         this.state = ChairState.NOT_READY;
