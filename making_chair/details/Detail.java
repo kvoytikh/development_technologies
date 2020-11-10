@@ -1,6 +1,4 @@
-package com.company.interfaces;
-
-import com.company.details.Details;
+package com.company.details;
 
 public abstract class Detail {
     protected double width;
